@@ -10,35 +10,85 @@
 4. ConcreteObserver(구체적인 옵저버): 실제로 상태 변화를 감지하고 처리하는 옵저버의 구체적인 구현입니다.
 
 ```
-public class Singleton {
-    // 유일한 인스턴스를 저장하기 위한 정적 변수
-    private static Singleton instance;
-    
-    // 생성자를 private으로 선언하여 외부에서 인스턴스를 생성하지 못하도록 함
-    private Singleton() {
-        // 생성자 내용
+import java.util.ArrayList;
+import java.util.List;
+
+// 주제(Subject) 인터페이스
+interface Subject {
+    void attach(Observer observer);
+    void detach(Observer observer);
+    void notifyObservers();
+}
+
+// 구체적인 주제(Concrete Subject)
+class ConcreteSubject implements Subject {
+    private List<Observer> observers = new ArrayList<>();
+    private int state;
+
+    public void setState(int state) {
+        this.state = state;
+        notifyObservers();
     }
-    
-    // 유일한 인스턴스에 접근할 수 있는 정적 메서드
-    public static Singleton getInstance() {
-        // 인스턴스가 없는 경우에만 인스턴스 생성
-        if (instance == null) {
-            instance = new Singleton();
+
+    @Override
+    public void attach(Observer observer) {
+        observers.add(observer);
+    }
+
+    @Override
+    public void detach(Observer observer) {
+        observers.remove(observer);
+    }
+
+    @Override
+    public void notifyObservers() {
+        for (Observer observer : observers) {
+            observer.update(state);
         }
-        return instance;
+    }
+}
+
+// 옵저버(Observer) 인터페이스
+interface Observer {
+    void update(int state);
+}
+
+// 구체적인 옵저버(Concrete Observer)
+class ConcreteObserver implements Observer {
+    private int observerState;
+
+    @Override
+    public void update(int state) {
+        observerState = state;
+        System.out.println("옵저버 상태 업데이트: " + observerState);
+    }
+}
+
+// 클라이언트 코드
+public class Client {
+    public static void main(String[] args) {
+        ConcreteSubject subject = new ConcreteSubject();
+
+        // 옵저버 생성
+        ConcreteObserver observer1 = new ConcreteObserver();
+        ConcreteObserver observer2 = new ConcreteObserver();
+
+        // 주제에 옵저버 등록
+        subject.attach(observer1);
+        subject.attach(observer2);
+
+        // 주제의 상태 변경
+        subject.setState(10);
+
+        // 주제에서 옵저버 제거
+        subject.detach(observer1);
+
+        // 다시 상태 변경
+        subject.setState(20);
+        
+        //observer1.observerState=10, observer2.observerState=20
     }
 }
 ```
 
 ### 면접 질문
-- **싱글톤 디자인을 활용하는 경우를 예를 들어 설명해주세요.** <br>
-싱글톤 패턴은 특정 용도로 인스턴스를 하나만 생성하여 전역으로 이용하고 싶을 때 사용합니다.
-예를 들어 설정 정보를 관리하는 클래스가 있을 때 여러 모듈에서 인스턴스를 생성하게 되면 각 모듈마다 설정 정보가 달라져 일관성을 해칠 수 있습니다.
-이러한 경우 싱글톤 패턴을 이용하여 인스턴스를 한 번만 생성하고 전역으로 공유하여 사용한다면
-문제의 발생과 불필요한 메모리 낭비를 방지할 수 있습니다.
-
-
-- **싱글턴 디자인 패턴의 장단점을 설명해주세요.** <br>
-싱글톤 패턴의 장점으로는 불필요한 메모리 낭비를 방지하고 전역 인스턴스를 통해 쉽게 자원공유를 할 수 있다는 점이 있습니다.
-반면에 단점으로는 전역으로 접근을 허용하기 때문에 해당 인스턴스에 의존하는 경우 결합도가 증가할 수 있습니다.
-이 경우 의존성 주입을 통해 결합도를 느슨하게 만들어줄 수 있습니다.
