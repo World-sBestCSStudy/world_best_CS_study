@@ -18,11 +18,11 @@
        - 같은 이름을 가진 메서드를 여러개 두는것
        - 메서드 타입, 매개변수 유형, 개수 등으로 여러개를 둘 수 있다
        - 컴파일 중에 발생하는 정적 다형성
-         ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/e0752d0e-1ac7-445d-9864-5b570fd88fa5/6638f003-c50e-421b-9ed0-c36164053b16/Untitled.png)
+         ![Untitled](assets/overloading.png)
      - 오버라이딩
        - 상위 클래스로 부터 상속받은 메서드를 하위 클래스가 재정의 하는것
        - 런타임중에 발생하는 동적 다형성
-       ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/e0752d0e-1ac7-445d-9864-5b570fd88fa5/3a150c01-e175-4389-a7cf-53e5734b672d/Untitled.png)
+       ![Untitled](assets/overriding.png)
 - 객체지향 프로그래밍 설계원칙 - SOLID
   - **S(단일 책임 원칙)**
     - 모든 클래스는 각각 하나의 책임만 가져야한다.
