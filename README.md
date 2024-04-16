@@ -14,7 +14,8 @@
 
 ### 📃 Contents
 
-- [디자인 패턴 & 프로그래밍 패러다임](https://github.com/dahui0525/world_best_CS_study/blob/main/DesignPattern)
+- [디자인 패턴](https://github.com/dahui0525/world_best_CS_study/blob/main/DesignPattern)
+- [프로그래밍 패러다임](https://github.com/dahui0525/world_best_CS_study/blob/main/ProgrammingParadigm)
 - [네트워크]()
 - [운영체제]()
 - [데이터베이스]()
