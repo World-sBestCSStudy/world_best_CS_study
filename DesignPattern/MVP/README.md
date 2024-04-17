@@ -3,6 +3,9 @@
 <center><img width="400" height="" src="https://github.com/dahui0525/world_best_CS_study/assets/80496853/115e4a9c-1f4f-496c-b8a3-90d5d02b6567"></center>
 
 C ⇒ **P**resenter
+
+MVC 패턴의 확장. 모델 간 의존성을 줄이고 테스트 용이성을 높임.
+
 >**Presenter**: Model과 View 사이에서 중개자 역할<br>
     - Controller와 유사하지만 **View에 직접 연결되지 않고 사용자 인터페이스를 통해 상호작용**하게 된다. (Presenter ← PresenterImpl)<br>
     - View에서 요청한 정보를 통해 Model을 가공하여 View로 전달해주는 방식을 취한다.
