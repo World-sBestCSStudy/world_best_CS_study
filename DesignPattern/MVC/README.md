@@ -61,3 +61,28 @@
 ### 예시
 > 📌 **Spring MVC**<br>
 ![image](https://github.com/dahui0525/world_best_CS_study/assets/80496853/4d6a83a3-cabb-4e27-aee4-f7e8c6471f4d)
+
+<br> 
+
+## ❓ 면접질문
+**Q. Spring MVC에 대해 설명해주세요.**
+```
+A. MVC란 Model, View, Controller로, 관심사의 분리에 중점을 둔 디자인 패턴입니다. Model에서는 데이터 관리 및 비즈니스 로직 처리를 하며, View는 레이아웃과 화면을 관리합니다. Controller는 사용자의 요청을 처리하고 Model과 View의 중개 역할을 합니다.
+Spring MVC에서는 Model은 DAO, DTO, Service에 해당하고, View는 html, jsp 또는 Rest API로 서버 구현 시 json 응답까지 해당한다고 볼 수 있습니다. 
+```
+
+<br>
+
+**Q. MVC의 요청 처리 흐름을 설명해주세요.**
+![image](https://github.com/seodangdogProject/seodangdog/assets/80496853/8eb03a69-fd8c-46be-8eea-792153fe7aa0)
+
+```
+1. 클라이언트는 URL을 통해 요청을 전송한다.
+2. 디스패처 서블릿(요청부터 응답까지의 MVC처리 과정을 통제한다.)은 핸들러 매핑(요청을 어떤 URL을 어떤 Controller가 처리할 지 결정한다.)을 통해 해당 요청이 어느 컨트롤러에게 온 요청인지 찾는다.
+3. 디스패처 서블릿은 핸들러 어댑터(핸들러 매핑에서 결정된 정보로 해당 메소드를 직접 호출해주는 역할)에게 요청의 전달을 맡긴다.
+4. 핸들러 어댑터는 해당 컨트롤러에 요청을 전달한다.
+5. 컨트롤러는 비즈니스 로직을 처리한 후에 반환할 뷰의 이름을 반환한다.
+6. 디스패처 서블릿은 뷰 리졸버(컨트롤러의 처리결과를 생성할 View를 결정한다)를 통해 반환할 뷰를 찾는다.
+7. 디스패처 서블릿은 컨트롤러에서 뷰에 전달할 데이터를 추가한다.
+8. 데이터가 추가된 뷰를 반환한다.
+```
