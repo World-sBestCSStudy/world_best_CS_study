@@ -4,7 +4,7 @@
 
 - JVM의Heap 영역에서 동적으로 할당했던 메모리 중 필요 없게 된 메모리 객체(garbage)를 모아 주기적으로 제거하는 프로세스
 
-![Untitled](./assets/gc.PNG)
+![Untitled](./assets/GC.PNG)
 
 ### 단점
 
