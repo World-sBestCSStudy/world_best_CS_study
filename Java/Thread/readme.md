@@ -1,3 +1,4 @@
+
 # 스레드
 
 ### 스레드란?
@@ -10,7 +11,7 @@
 
 ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/e3e78d12-2dc1-4f0e-b156-d02e7bb67166/6d7272f1-8c97-4754-ad6a-15113630acb8/Untitled.png)
 
-Java에서 스레드는 **‘멀티 스레드(Multi-Thread)’을 지원하여 하나의 프로세스 안에 한 개 이상의 스레드를 지원하는 구조**입니다.
+Java에서 스레드는 **‘멀티 스레드(Multi-Thread)’을 지원하여 하나의 프로세스 안에 한 개 이상의 스레드를 지원하는s 구조**입니다.
 
 Java에서는 멀티 스레드를 통해 ‘비동기식 및 병렬 애플리케이션’을 개발할 수 있습니다
 
