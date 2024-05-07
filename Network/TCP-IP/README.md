@@ -57,7 +57,7 @@
 
 ### Sliding Window 동작방식
 
-![Untitled](./assets/ss.png)
+![Untitled](./assets/sw.png)
 
 1. 최초로 수신자는 윈도우 사이즈를 7로 정한다.
 2. 송신자는 수신자의 확인 응답(ACK)을 받기 전까지 데이터를 보낸다.
