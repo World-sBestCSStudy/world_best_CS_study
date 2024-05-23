@@ -30,8 +30,8 @@
 | 2024-04-17 | 디자인 패턴과 프로그래밍 패러다임 | 프록시패턴,이터레이터패턴,노출모듈패턴 | 싱글톤패턴, 팩토리패턴, 전략패턴, 옵저버패턴 | MVC 패턴,MVP 패턴,MVVM 패턴 | 선언형과 함수형 프로그래밍,객체지향 프로그래밍,절차형 프로그래밍,패러다임의 혼합 |
 | 2024-04-25 | 자바 | (직렬화), 문자열 클래스, 오브젝트 클래스, Casting, Thread | Error & Exception, Stream API, Interned String, Composition | 컴파일, Call by Value & Reference, Primitive & Reference type, Autoboxing & Unboxing | Thread, 고유락, JVM, Garbage Collection |
 | 2024-05-02 | 네트워크 | OSI 7계층, TCP 3 & 4 Handshake | 로드밸런싱, Blocking/Non-Blocking & Synchronous/Asynchronous, Blocking & Non-Blocking I/O | HTTP & HTTPS, TLS/SSL Handshake | TCP/IP 흐름제어 & 혼잡제어, UDP, 대칭키 & 공개키 |
-| 2024-05-11 | Web | 라우저 동작 방법, 쿠키 & 세션, HTTP Request Methods | 인증 방식, 로깅 레벨(Logging Level), CSRF & XSS | HTTP status code, REST API, Web Server와 WAS | OAuth, JWT(JSON Web Token) |
-| 2024-05-23 | 알고리즘 | 병합 정렬(Merge Sort), 힙 정렬(Heap Sort), 기수 정렬(Radix Sort), 계수 정렬(Counting Sort) | 최소 공통 조상(LCA), 동적 계획법(DP), 다익스트라(Dijkstra) 알고리즘, 비트마스크(BitMask) | 이분 탐색(Binary Search), 해시 테이블(Hash Table), DFS & BFS, 최장 증가 수열(LIS) | 거품 정렬(Bubble Sort), 선택 정렬(Selection Sort), 삽입 정렬(Insertion Sort),퀵 정렬(Quick Sort)|
+| 2024-05-11 | Web | 인증 방식, 로깅 레벨(Logging Level), CSRF & XSS | HTTP status code, REST API, Web Server와 WAS | OAuth, JWT(JSON Web Token) | 라우저 동작 방법, 쿠키 & 세션, HTTP Request Methods |
+| 2024-05-23 | 알고리즘 | 최소 공통 조상(LCA), 동적 계획법(DP), 다익스트라(Dijkstra) 알고리즘, 비트마스크(BitMask) | 이분 탐색(Binary Search), 해시 테이블(Hash Table), DFS & BFS, 최장 증가 수열(LIS) | 거품 정렬(Bubble Sort), 선택 정렬(Selection Sort), 삽입 정렬(Insertion Sort),퀵 정렬(Quick Sort)| 병합 정렬(Merge Sort), 힙 정렬(Heap Sort), 기수 정렬(Radix Sort), 계수 정렬(Counting Sort) |
 
 
 
