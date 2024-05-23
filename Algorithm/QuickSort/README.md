@@ -28,7 +28,7 @@ quick sort는 pivot을 기준으로 좌, 우측으로 배열을 쪼갠다.
 
 ### 그림으로 이해하기
 #### 1.
-![image](https://github.com/dahui0525/world_best_CS_study/assets/80496853/cebbb0cf-e676-419d-8958-754a3c5cae40)
+![image](./assets/quick.gif)
 
 #### 2.
 ![image](https://github.com/dahui0525/world_best_CS_study/assets/80496853/5b5184e9-72a6-4089-baa4-593eca6a848d)

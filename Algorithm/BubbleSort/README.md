@@ -18,7 +18,7 @@ index N개의 배열만 있으면 되므로 **O(n)**
 <br/>
 
 ### 그림으로 이해하기
-![image](https://github.com/dahui0525/world_best_CS_study/assets/80496853/f7e6e4ec-89b1-4ad0-9929-6db7b37ea3a7)
+![image](./assets/bubble.gif)
 
 <br/>
 

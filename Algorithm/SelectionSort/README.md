@@ -11,7 +11,7 @@ index N개의 배열만 있으면 되므로 **O(n)**
 
 <br/>
 
-![image](https://github.com/dahui0525/world_best_CS_study/assets/80496853/24ca473c-25b1-45a5-9729-61f7de2b5c6a)
+![image](./assets/select.gif)
 
 <br/>
 
