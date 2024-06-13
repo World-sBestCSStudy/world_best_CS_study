@@ -60,15 +60,15 @@ DB 저장 용량 또한 효율적으로 관리할 수 있다.
 **2NF로 분리 후**:
 
 - 모델 테이블:
-  | Manufacturer | Model  |
+  | Manufacturer | Model |
   | ------------ | ------ |
-  | Ford         | Fiesta |
-  | Toyota       | Camry  |
+  | Ford | Fiesta |
+  | Toyota | Camry |
 - 제조사 테이블:
   | Manufacturer | Manufacturer Country |
   | ------------ | -------------------- |
-  | Ford         | USA                  |
-  | Toyota       | Japan                |
+  | Ford | USA |
+  | Toyota | Japan |
 
 ### 제 3정규화(3NF)
 
@@ -94,13 +94,13 @@ DB 저장 용량 또한 효율적으로 관리할 수 있다.
 - 경기 테이블:
   | Tournament | Year | Winner |
   | ---------- | ---- | ------ |
-  | Wimbledon  | 2020 | John   |
-  | US Open    | 2020 | Jane   |
+  | Wimbledon | 2020 | John |
+  | US Open | 2020 | Jane |
 - 승자 테이블:
   | Winner | Winner Date of Birth |
   | ------ | -------------------- |
-  | John   | 1990-01-01           |
-  | Jane   | 1992-02-02           |
+  | John | 1990-01-01 |
+  | Jane | 1992-02-02 |
 
 ### 제 4정규화(4NF)
 
@@ -122,15 +122,15 @@ DB 저장 용량 또한 효율적으로 관리할 수 있다.
 **4NF로 분리 후**:
 
 - 주소 테이블:
-  | Customer | Address     |
+  | Customer | Address |
   | -------- | ----------- |
-  | John     | 123 Main St |
-  | John     | 456 Oak St  |
+  | John | 123 Main St |
+  | John | 456 Oak St |
 - 전화번호 테이블:
   | Customer | Phone Number |
   | -------- | ------------ |
-  | John     | 123-4567     |
-  | John     | 234-5678     |
+  | John | 123-4567 |
+  | John | 234-5678 |
 
 ### 제 5정규화(5NF)
 
@@ -152,14 +152,14 @@ DB 저장 용량 또한 효율적으로 관리할 수 있다.
 **5NF로 분리 후**:
 
 - 학생-코스 테이블:
-  | Student | Course  |
+  | Student | Course |
   | ------- | ------- |
-  | Alice   | Math    |
-  | Bob     | Science |
+  | Alice | Math |
+  | Bob | Science |
 - 코스-강사 테이블:
-  | Course  | Instructor  |
+  | Course | Instructor |
   | ------- | ----------- |
-  | Math    | Prof. Smith |
+  | Math | Prof. Smith |
   | Science | Prof. Jones |
 
 ### BCNF (Boyce-Codd Normal Form)
@@ -186,10 +186,26 @@ DB 저장 용량 또한 효율적으로 관리할 수 있다.
 - 교수-부서 테이블:
   | Professor | Department |
   | --------- | ---------- |
-  | Smith     | Math       |
-  | Jones     | Science    |
+  | Smith | Math |
+  | Jones | Science |
 - 부서-사무실 테이블:
   | Department | Office |
   | --- | --- |
   | Math | 101 |
   | Science | 102 |
+
+## 면접 질문
+
+### 💡 정규화가 무엇인가요?
+
+하나의 릴레이션에 하나의 의미만 존재하도록 릴레이션을 분해하는 과정이며, 데이터의 일관성, 최소한의 데이터 중복, 최대한의 데이터 유연성을 위한 방법입니다.
+
+제1 정규형 : 테이블의 컬럼이 원자 값(Atomic Value; 하나의 값)을 갖도록 분해합니다.
+
+제2 정규형: 제1 정규형을 만족하고, 기본키가 아닌 속성이 기본키에 완전 함수 종속이도록 분해합니다.
+※ 여기서 완전 함수 종속이란 기본키의 부분집합이 다른 값을 결정하지 않는 것을 의미
+
+제3 정규형 : 제2 정규형을 만족하고, 이행적 함수 종속을 없애도록 분해합니다.
+※ 여기서 이행적 종속이란 A → B, B → C가 성립할 때 A → C가 성립되는 것을 의미
+
+BCNF 정규형 : 제3 정규형을 만족하고, 함수 종속성 X → Y가 성립할 때 모든 결정자 X가 후보키가 되도록 분해합니다.
