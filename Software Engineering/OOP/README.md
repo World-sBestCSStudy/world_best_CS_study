@@ -10,20 +10,15 @@ Object-Oriented Programming(OOP)
 프로그램에서 사용되는 **데이터** or 참조되는 **공간**을 의미. 
 값을 저장할 `변수`와 작업을 수행할 `메소드`를 연관된 것들끼리 묶어서 만든 것.
 > 레고에 빗대어 표현하자면 `객체`는 각각의 레고 조각이고 `객체`를 조립해서 무언가를 만드는 방식이 **객체지향 프로그래밍**
-<figure align="center">
-<img src="https://github.com/cuzzzu1318/cuzzzu1318.github.io/assets/77597885/0730a2c4-4dfe-4c3c-ad60-d6247e12b6c3" alt="객체지향 예시"></img>
-<figcaption>자동차 객체</figcaption>
-</figure>
+
+![자동차 객체](https://github.com/cuzzzu1318/cuzzzu1318.github.io/assets/77597885/0730a2c4-4dfe-4c3c-ad60-d6247e12b6c3)
 
 ## 객체지향의 특징
 크게 네 가지가 있다. `추상화`, `캡슐화`, `상속`, `다형성`
 
 ### 추상화
 객체에서 **공통된 속성, 행위를 추출하여 정의**하는 것
-<figure align="center">
-<img src="https://i0.wp.com/blogcodestates.com/wp-content/uploads/2022/11/%EA%B0%9D%EC%B2%B4-%EC%A7%80%ED%96%A5-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D-%EC%B6%94%EC%83%81%ED%99%94.png?resize=768%2C509&ssl=1" alt="추상화 예시"></img>
-<figcaption>추상화 예시</figcaption>
-</figure>
+![추상화 예시](https://i0.wp.com/blogcodestates.com/wp-content/uploads/2022/11/%EA%B0%9D%EC%B2%B4-%EC%A7%80%ED%96%A5-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D-%EC%B6%94%EC%83%81%ED%99%94.png?resize=768%2C509&ssl=1)
 
 자동차와 오토바이는 모두 이동수단이며 전진과 후진이라는 공통된 행위를 한다. 이러한 공통된 특징을 추출하여 `Vehicle` 이라는 상위 클래스를 선언할 수 있다.<br>
 Java에서는 추상 클래스와 인터페이스로 구현할 수 있다.
@@ -37,10 +32,7 @@ Java에서는 추상 클래스와 인터페이스로 구현할 수 있다.
 ### 상속
 기존의 객체를 재활용하여 새로운 하위 객체를 생성하는 것.
 객체간 공통된 속성과 기능을 상위 객체로 추상화하고, 상위 객체에서부터 확장된 여러 하위 객체들이 **상위 객체의 속성과 기능을 간편하게 재사용**할 수 있도록 함.
-<figure align="center">
-<img src="https://i0.wp.com/blogcodestates.com/wp-content/uploads/2022/11/%EA%B0%9D%EC%B2%B4-%EC%A7%80%ED%96%A5-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D-%EC%83%81%EC%86%8D.png?resize=768%2C509&ssl=1" alt="상속 예시"></img>
-<figcaption>상속 예시</figcaption>
-</figure>
+![상속 예시](https://i0.wp.com/blogcodestates.com/wp-content/uploads/2022/11/%EA%B0%9D%EC%B2%B4-%EC%A7%80%ED%96%A5-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D-%EC%83%81%EC%86%8D.png?resize=768%2C509&ssl=1)
 
 상속을 사용하지 않는다면 빨간색으로 표시된 부분도 중복된 코드로 작성해야한다.
 하지만 상위 객체인 `Vehicle`에 빨간색 부분을 모두 선언하고, 해당 객체를 상속하면 각각의 객체는 공통되지 않은 파란색 부분만 구현하면 된다. 
