@@ -70,6 +70,6 @@ Java 8 이후로부터 Java에서도 함수형 프로그래밍이 가능해졌�
 
 ---
 # 참고
-[면접-꿀팁-함수형-프로그래밍Functional-Programming이란](https://thecho7.tistory.com/entry/%EB%A9%B4%EC%A0%91-%EA%BF%80%ED%8C%81-%ED%95%A8%EC%88%98%ED%98%95-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8DFunctional-Programming%EC%9D%B4%EB%9E%80)
-[[프로그래밍] 함수형 프로그래밍(Functional Programming) 이란?](https://mangkyu.tistory.com/111)
-[Tech Interview - 함수형 프로그래밍](https://gyoogle.dev/blog/computer-science/software-engineering/Fuctional%20Programming.html)
+[면접-꿀팁-함수형-프로그래밍Functional-Programming이란](https://thecho7.tistory.com/entry/%EB%A9%B4%EC%A0%91-%EA%BF%80%ED%8C%81-%ED%95%A8%EC%88%98%ED%98%95-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8DFunctional-Programming%EC%9D%B4%EB%9E%80)<br>
+[[프로그래밍] 함수형 프로그래밍(Functional Programming) 이란?](https://mangkyu.tistory.com/111)<br>
+[Tech Interview - 함수형 프로그래밍](https://gyoogle.dev/blog/computer-science/software-engineering/Fuctional%20Programming.html)<br>

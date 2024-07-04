@@ -194,8 +194,8 @@ public class Calculator{
 
 ---
 ### 참고
-[객체지향 프로그래밍이란](https://jongminfire.dev/%EA%B0%9D%EC%B2%B4%EC%A7%80%ED%96%A5-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%EC%9D%B4%EB%9E%80)
-[객체지향 프로그래밍 특징](https://www.codestates.com/blog/content/%EA%B0%9D%EC%B2%B4-%EC%A7%80%ED%96%A5-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D-%ED%8A%B9%EC%A7%95)
-[OOP-객체-지향-프로그래밍-개념과-추상화-설계의-이해](https://inpa.tistory.com/entry/OOP-%EA%B0%9D%EC%B2%B4-%EC%A7%80%ED%96%A5-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D-%EA%B0%9C%EB%85%90%EA%B3%BC-%EC%B6%94%EC%83%81%ED%99%94-%EC%84%A4%EA%B3%84%EC%9D%98-%EC%9D%B4%ED%95%B4)
-[객체지향 개발 5대 원리: SOLID](https://www.nextree.co.kr/p6960/)
-[Tech Interview - 객체지향 프로그래밍](https://gyoogle.dev/blog/computer-science/software-engineering/Object-Oriented%20Programming.html)
+[객체지향 프로그래밍이란](https://jongminfire.dev/%EA%B0%9D%EC%B2%B4%EC%A7%80%ED%96%A5-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%EC%9D%B4%EB%9E%80)<br>
+[객체지향 프로그래밍 특징](https://www.codestates.com/blog/content/%EA%B0%9D%EC%B2%B4-%EC%A7%80%ED%96%A5-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D-%ED%8A%B9%EC%A7%95)<br>
+[OOP-객체-지향-프로그래밍-개념과-추상화-설계의-이해](https://inpa.tistory.com/entry/OOP-%EA%B0%9D%EC%B2%B4-%EC%A7%80%ED%96%A5-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D-%EA%B0%9C%EB%85%90%EA%B3%BC-%EC%B6%94%EC%83%81%ED%99%94-%EC%84%A4%EA%B3%84%EC%9D%98-%EC%9D%B4%ED%95%B4)<br>
+[객체지향 개발 5대 원리: SOLID](https://www.nextree.co.kr/p6960/)<br>
+[Tech Interview - 객체지향 프로그래밍](https://gyoogle.dev/blog/computer-science/software-engineering/Object-Oriented%20Programming.html)<br>
