@@ -31,7 +31,7 @@ Spring 프로젝트를 실행하게 되면 `@SpringBootApplication` 어노테이
 
 ## `@SpringBootApplication` 어노테이션
 
-`@SpringBootApplication` 어느테이션 내부를 살펴보면 다음과 같이 구성되어 있다.
+`@SpringBootApplication` 어노테이션 내부를 살펴보면 다음과 같이 구성되어 있다.
 
 ```java
 @Target({ElementType.TYPE})
@@ -175,6 +175,12 @@ public SpringApplication(ResourceLoader resourceLoader, Class<?>... primarySourc
     ```
     - Java 9에서 도입된 StackWalker 를 통해 호출 스택을 탐색
     - Main클래스를 찾는다. 없으면 null을 반환
+
+
+## 질문
+
+### @SpringBootApplication은 어떤 기능을 하나요?
+> @SpringBootApplication은 세 가지의 핵심 어노테이션을 한번에 적용하는 역할을 합니다. Configuration 어노테이션을 포함한 @SpringBootConfiguration 어노테이션과 스프링부트의 자동 구성 기능을 활성화하는 @EnableAutoConfiguration 어노테이션, 컴포넌트 스캔의 기준점이 되는 @Component 어노테이션을 포함합니다. 
 
 ## 참고
 [망나니 개발자](https://mangkyu.tistory.com/category/Spring%20)<br>
