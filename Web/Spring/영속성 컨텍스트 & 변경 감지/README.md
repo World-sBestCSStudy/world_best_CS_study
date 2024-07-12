@@ -109,3 +109,4 @@ em.setFlushMode(FlushModeType.COMMIT)
 // FlushModeType.COMMIT: 커밋할 때만 플러시
 ```
 <br>    
+
