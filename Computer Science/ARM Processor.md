@@ -47,3 +47,10 @@
     ARM은 RISC 아키텍처를 사용하고 x86은 CISC아키텍처를 사용한다는 아키텍처 측면의 차이가 가장 큽니다. 또한 ARM 프로세서는 저전력 소모를 중심으로 설계되어 저전력 장치에 주로 사용됩니다.
 ```
 
+# 참고
+[[컴퓨터구조]ISA](https://levenshtein.tistory.com/166)<br>
+[[CS]CISC와 RISC의 차이](https://velog.io/@yarogono/CS-CISC%EC%99%80-RISC%EC%9D%98-%EC%B0%A8%EC%9D%B4%EC%99%80-%EA%B0%9C%EB%85%90)<br>
+[RISC와 CISC 개념, 분석, 비교](https://yaneodoo2.tistory.com/entry/RISC%EC%99%80-CISC%EC%9D%98-%EB%AA%A8%EB%93%A0-%EA%B2%83-%EA%B0%9C%EB%85%90-%EB%B6%84%EC%84%9D-%EB%B9%84%EA%B5%90)
+<br>
+[[컴퓨터구조]ARM프로세서](https://daily-progress.tistory.com/71)<br>
+[ARM아키텍처의 이해](https://m.blog.naver.com/suresofttech/221249244004)
