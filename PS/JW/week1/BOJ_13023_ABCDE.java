@@ -4,7 +4,7 @@ import java.io.InputStreamReader;
 import java.util.Arrays;
 import java.util.StringTokenizer;
 
-public class BOJ_ABCDE_13023 {
+public class BOJ_13023_ABCDE {
 	static int N, M;
 	static boolean[][] friends;
 	static boolean[] visit;
