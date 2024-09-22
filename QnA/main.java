@@ -152,6 +152,7 @@ public class Main {
 				"CS: 컴퓨터가 소수를 표현하는 두 가지 방법에 대해 설명하시오.",
 				"CS: 컴퓨터가 소수를 표현할 때 오차가 생기는 이유에 대해 설명하시오.",
 				"CS: 컴퓨터의 기억장치엔 세 가지가 있습니다. 각각에 대해 설명하시오."
+
 		};
 		String[] members = {"재원", "창희", "성완", "정호"};
 		boolean[] v = new boolean[questions.length];
