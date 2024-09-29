@@ -1,16 +1,17 @@
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
-import java.util.*;
+import java.util.ArrayDeque;
+import java.util.Deque;
+import java.util.Set;
+import java.util.TreeSet;
 
-//이분 탐색으로 예상 피로도를 탐색한 후에 해당 피로도로 모든 K가 탐색가능하다면 수를 줄이고
-//탐색이 불가능하다면 수를 늘리는 식으로 필요한 피로도를 찾아냄
+//투포인터로 예상 피로도 범위를 탐색
+//해당 피로도로 모든 K가 탐색가능하다면 left를 올려서 범위를 줄이고
+//탐색이 불가능하다면 right를 올려서 범위를 찾아냄
+//되는 범위 중 가장 낮은 피로도 값을 가질 때가 답
 //값의 범위를 줄이기 위해 가능한 값의 범위를 미리 저장
 public class Main {
-    static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
     static int N, count, ans = Integer.MAX_VALUE;
     static char[][] map;
     static int[][] height;
-    static StringTokenizer st;
     static int[] dr = {-1, -1, 0, 1, 1, 1, 0, -1};//위부터 반시계방향
     static int[] dc = {0, -1, -1, -1, 0, 1, 1, 1};
     static int[] start = new int[2];
@@ -19,15 +20,16 @@ public class Main {
     static int[] range;
 
     public static void main(String[] args) throws Exception {
-        N = Integer.parseInt(br.readLine());
+        Reader in = new Reader();
+
+        N = in.nextInt();
 
         map = new char[N][N];
         height = new int[N][N];
 
         for (int i = 0; i < N; i++) {
-            String s = br.readLine();
             for (int j = 0; j < N; j++) {
-                map[i][j] = s.charAt(j);
+                map[i][j] = in.nextChar();
 
                 if (map[i][j] == 'P') {
                     start[0] = i;
@@ -40,10 +42,8 @@ public class Main {
         }
 
         for (int i = 0; i < N; i++) {
-            st = new StringTokenizer(br.readLine());
             for (int j = 0; j < N; j++) {
-                height[i][j] = Integer.parseInt(st.nextToken());
-
+                height[i][j] = in.nextInt();
                 //범위를 N으로 줄이기 위해 set에 담음
                 set.add(height[i][j]);
             }
@@ -69,7 +69,7 @@ public class Main {
                 right++;
                 continue;
             }
-            
+
             boolean result = bfs(range[left], range[right]);
             if (!result)
                 right++;
@@ -120,5 +120,45 @@ public class Main {
 
     static boolean canGo(int r, int c) {
         return r >= 0 && r < N && c >= 0 && c < N && !visit[r][c];
+    }
+
+    static class Reader {
+        final int SIZE = 1 << 13;
+        byte[] buffer = new byte[SIZE];
+        int index, size;
+
+        char nextChar() throws Exception {
+            byte c;
+            while ((c = read()) < 32) ; // SPACE 분리라면 <=로, SPACE 무시라면 <로
+            return (char) c;
+        }
+
+        int nextInt() throws Exception {
+            int n = 0;
+            byte c;
+            boolean isMinus = false;
+            while ((c = read()) <= 32) {
+                if (size < 0) return -1;
+            }
+            if (c == 45) {
+                c = read();
+                isMinus = true;
+            }
+            do n = (n << 3) + (n << 1) + (c & 15);
+            while (isNumber(c = read()));
+            return isMinus ? ~n + 1 : n;
+        }
+
+        boolean isNumber(byte c) {
+            return 47 < c && c < 58;
+        }
+
+        byte read() throws Exception {
+            if (index == size) {
+                size = System.in.read(buffer, index = 0, SIZE);
+                if (size < 0) buffer[0] = -1;
+            }
+            return buffer[index++];
+        }
     }
 }
