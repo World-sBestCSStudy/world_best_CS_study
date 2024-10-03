@@ -1,4 +1,4 @@
-// BOJ_1937_욕심쟁이 판다
+// BOJ_2842_집배원 한상덕
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -6,62 +6,91 @@ import java.io.InputStreamReader;
 import java.util.*;
 
 public class Main {
+    static int[] dx = {-1, -1, -1, 0, 1, 1, 1, 0}, dy = {-1, 0, 1, 1, 1, 0, -1, -1};
     static int n;
-    static int[][] board;
-    static int[] dx = {-1, 0, 1, 0}, dy = {0, 1, 0, -1};
-    static int answer = 1;
-    static int[][] count;
+    static char[][] board;
+    static List<Integer> height=new ArrayList<>();
+    static int[][] diff;
 
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st;
 
         n = Integer.parseInt(br.readLine());
-        board = new int[n][n];
-        count = new int[n][n];
+        board = new char[n][n];
+        diff = new int[n][n];
+
+        Node start = null;
+        int target = 0;
+        for (int i = 0; i < n; i++) {
+            char[] temp = br.readLine().toCharArray();
+            for (int j = 0; j < n; j++) {
+                board[i][j] = temp[j];
+                if (board[i][j] == 'P') start = new Node(i, j);
+                if (board[i][j] == 'K') target++;
+            }
+        }
 
         for (int i = 0; i < n; i++) {
             st = new StringTokenizer(br.readLine());
             for (int j = 0; j < n; j++) {
-                board[i][j] = Integer.parseInt(st.nextToken());
-                count[i][j] = 1;
+                diff[i][j] = Integer.parseInt(st.nextToken());
+                if(!height.contains(diff[i][j])) height.add(diff[i][j]);
             }
         }
 
-        for (int i = 0; i < n; i++) {
-            for (int j = 0; j < n; j++) {
-                dfs(i,j);
+        Collections.sort(height);
+        int left = 0, right = 0;
+        int answer = Integer.MAX_VALUE;
+        while(right<height.size() && left<height.size()){
+            boolean result = bfs(start,target, height.get(left), height.get(right));
+            if(result){
+                answer =Math.min(answer, Math.abs(height.get(right) - height.get(left)));
+                left++;
+            }else{
+                right++;
             }
         }
-
-        for (int i = 0; i < n; i++) {
-            for (int j = 0; j < n; j++) {
-                answer = Math.max(answer, count[i][j]);
-            }
-        }
-
-
         System.out.println(answer);
 
     }
 
+    public static boolean bfs(Node start, int target, int min, int max) {
+        if (diff[start.x][start.y] < min || diff[start.x][start.y] > max) {
+            return false;
+        }
+        Queue<Node> q = new LinkedList<>();
+        boolean[][] v = new boolean[n][n];
 
-    //1이 아닌것만 탐색
-    public static int dfs(int x, int y) {
-        if (count[x][y] > 1) {
-            return count[x][y];
-        } else {
-            for (int i = 0; i < 4; i++) {
-                int nx = x + dx[i];
-                int ny = y + dy[i];
+        q.offer(new Node(start.x, start.y));
+        v[start.x][start.y] = true;
+        int count = 0;
+
+        while (!q.isEmpty()) {
+            Node node = q.poll();
+            for (int i = 0; i < 8; i++) {
+                int nx = node.x + dx[i];
+                int ny = node.y + dy[i];
 
                 if (nx < 0 || ny < 0 || nx >= n || ny >= n) continue;
 
-                if (board[nx][ny] > board[x][y]) {
-                    count[x][y] = Math.max(dfs(nx, ny) + 1, count[x][y]);
+                if(!v[nx][ny] && diff[nx][ny]>= min && diff[nx][ny]<=max){
+                    v[nx][ny] = true;
+                    q.offer(new Node(nx,ny));
+                    if(board[nx][ny] =='K') count++;
+
                 }
             }
-            return count[x][y];
+        }
+        return count == target;
+    }
+
+    static class Node {
+        int x, y;
+
+        public Node(int x, int y) {
+            this.x = x;
+            this.y = y;
         }
 
     }

@@ -1,4 +1,4 @@
-// BOJ_1937_욕심쟁이 판다
+// BOJ_12738_가장증가하는부분수열3
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -6,64 +6,42 @@ import java.io.InputStreamReader;
 import java.util.*;
 
 public class Main {
-    static int n;
-    static int[][] board;
-    static int[] dx = {-1, 0, 1, 0}, dy = {0, 1, 0, -1};
-    static int answer = 1;
-    static int[][] count;
 
     public static void main(String[] args) throws IOException {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        BufferedReader br= new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st;
 
-        n = Integer.parseInt(br.readLine());
-        board = new int[n][n];
-        count = new int[n][n];
+        int n = Integer.parseInt(br.readLine());
 
-        for (int i = 0; i < n; i++) {
-            st = new StringTokenizer(br.readLine());
-            for (int j = 0; j < n; j++) {
-                board[i][j] = Integer.parseInt(st.nextToken());
-                count[i][j] = 1;
+        st=new StringTokenizer(br.readLine());
+        int[] numbers= new int[n];
+        numbers[0] = Integer.parseInt(st.nextToken());
+        int len = 1;
+
+        for(int i =1; i<n; i++){
+            int number = Integer.parseInt(st.nextToken());
+            if(numbers[len-1]<number){
+                numbers[len++] = number;
+            }else{
+                int temp = lower(numbers,0, len, number);
+                numbers[temp] = number;
             }
         }
 
-        for (int i = 0; i < n; i++) {
-            for (int j = 0; j < n; j++) {
-                dfs(i,j);
-            }
-        }
-
-        for (int i = 0; i < n; i++) {
-            for (int j = 0; j < n; j++) {
-                answer = Math.max(answer, count[i][j]);
-            }
-        }
-
-
-        System.out.println(answer);
+        System.out.println(len);
 
     }
+    public static int lower(int[] numbers, int left, int right, int number){
+        while(left<right){
+            int mid = (left+right)/2;
 
-
-    //1이 아닌것만 탐색
-    public static int dfs(int x, int y) {
-        if (count[x][y] > 1) {
-            return count[x][y];
-        } else {
-            for (int i = 0; i < 4; i++) {
-                int nx = x + dx[i];
-                int ny = y + dy[i];
-
-                if (nx < 0 || ny < 0 || nx >= n || ny >= n) continue;
-
-                if (board[nx][ny] > board[x][y]) {
-                    count[x][y] = Math.max(dfs(nx, ny) + 1, count[x][y]);
-                }
+            if(numbers[mid] < number){
+                left = mid+1;
+            }else{
+                right = mid;
             }
-            return count[x][y];
         }
-
+        return left;
     }
 
 }
