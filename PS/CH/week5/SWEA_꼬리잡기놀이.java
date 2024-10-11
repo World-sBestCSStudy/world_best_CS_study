@@ -12,7 +12,7 @@ public class Main {
     static List<Player> prev;
     static List<Node> cmd;
     static int cmdLen;
-    static int answer= 0;
+    static int answer = 0;
 
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -49,31 +49,25 @@ public class Main {
             }
         }
 
-        for (int i = 0; i < N; i++) {
-            cmd.add(new Node(i, 0, 0));
-        }
-        for (int i = 0; i < N; i++) {
-            cmd.add(new Node(N - 1, i, 1));
-        }
-        for (int i = N - 1; i >= 0; i--) {
-            cmd.add(new Node(i, N - 1, 2));
-        }
-        for (int i = N - 1; i >= 0; i--) {
-            cmd.add(new Node(0, i, 3));
-        }
+        for (int i = 0; i < N; i++) cmd.add(new Node(i, 0, 0));
+
+        for (int i = 0; i < N; i++) cmd.add(new Node(N - 1, i, 1));
+
+        for (int i = N - 1; i >= 0; i--) cmd.add(new Node(i, N - 1, 2));
+
+        for (int i = N - 1; i >= 0; i--) cmd.add(new Node(0, i, 3));
 
 
         for (int i = 0; i < K; i++) {
             move();
             updateMap();
-            Node node = cmd.get(i % cmdLen);
-            shootBall(node.x,node.y, node.dir);
 
+            Node node = cmd.get(i % cmdLen);
+            shootBall(node.x, node.y, node.dir);
             updateMap();
         }
+
         System.out.println(answer);
-
-
     }
 
     public static void shootBall(int x, int y, int dir) {
@@ -86,21 +80,21 @@ public class Main {
         }
 
         for (List<Player> players : line) {
-            for(int i =0; i<players.size(); i++){
+            for (int i = 0; i < players.size(); i++) {
                 Player p = players.get(i);
-                if(p.x==x && p.y==y){
-                    answer+=(i+1)*(i+1);
+                if (p.x == x && p.y == y) {
+                    answer += (i + 1) * (i + 1);
+
                     Collections.reverse(players);
-                    players.get(0).id=1;
-                    for(int j =1; j<players.size()-1; j++){
-                        players.get(j).id=2;
+
+                    players.get(0).id = 1;
+                    for (int j = 1; j < players.size() - 1; j++) {
+                        players.get(j).id = 2;
                     }
-                    players.get(players.size()-1).id=3;
+                    players.get(players.size() - 1).id = 3;
                     return;
                 }
             }
-
-
         }
     }
 
@@ -109,14 +103,15 @@ public class Main {
 
             prev.clear();
             for (Player p : players) prev.add(new Player(p.id, p.x, p.y));
+
             for (int i = 0; i < players.size(); i++) {
                 Player p = players.get(i);
                 int[] next = findNext(p.x, p.y, i);
                 players.get(i).x = next[0];
                 players.get(i).y = next[1];
             }
-        }
 
+        }
     }
 
     public static int[] findNext(int x, int y, int number) {
@@ -144,8 +139,6 @@ public class Main {
     }
 
     public static void findLine(int id, int x, int y) {
-        int dir = findDir(x, y);
-
         Queue<Player> q = new LinkedList<>();
 
         Player tail = new Player(1, -1, -1);
@@ -183,22 +176,6 @@ public class Main {
         }
     }
 
-    public static int findDir(int x, int y) {
-        int dir = 0;
-
-        for (int i = 0; i < 4; i++) {
-            int nx = x + dx[i];
-            int ny = y + dy[i];
-            if (nx > 0 || ny > 0 || nx <= N || ny <= N) continue;
-
-            if (board[nx][ny] == 4) {
-                dir = i;
-                break;
-            }
-        }
-        return dir;
-    }
-
     public static void updateMap() {
         for (int i = 0; i < N; i++) Arrays.fill(user[i], 0);
 
@@ -213,15 +190,8 @@ public class Main {
         }
     }
 
-
-    public static void print() {
-
-        for (int i = 0; i < N; i++) System.out.println(Arrays.toString(user[i]));
-        System.out.println();
-    }
-
     static class Player {
-        int id, x, y, dir;
+        int id, x, y;
 
         public Player(int id, int x, int y) {
             this.id = id;
