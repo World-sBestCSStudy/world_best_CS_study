@@ -1,7 +1,6 @@
-# 🌏 word_best_CS_study
+# 🌏 world_best_CS_study
 
 ## 👍 세계 최고 개발자가 되기 위한 취준생의 CS 스터디
-
 - 스터디 기간 (24.04.10 ~ 진행중)
 - 스터디 목적 : 면접 대비, CS 학습
 
@@ -14,14 +13,14 @@
 
 ### 📃 Contents
 
-- [디자인 패턴](https://github.com/dahui0525/world_best_CS_study/blob/main/DesignPattern)
-- [프로그래밍 패러다임](https://github.com/dahui0525/world_best_CS_study/blob/main/ProgrammingParadigm)
-- [네트워크]()
-- [운영체제]()
-- [데이터베이스]()
+- [디자인 패턴](https://github.com/World-sBestCSStudy/world_best_CS_study/tree/main/DesignPattern)
+- [프로그래밍 패러다임](https://github.com/World-sBestCSStudy/world_best_CS_study/tree/main/ProgrammingParadigm)
+- [네트워크](https://github.com/World-sBestCSStudy/world_best_CS_study/tree/main/Network)
+- [운영체제](https://github.com/World-sBestCSStudy/world_best_CS_study/tree/main/Operating%20System)
+- [데이터베이스](https://github.com/World-sBestCSStudy/world_best_CS_study/tree/main/Database)
 - [자료구조]()
-- [자바]()
-- [스프링]()
+- [자바](https://github.com/World-sBestCSStudy/world_best_CS_study/tree/main/Java)
+- [스프링](https://github.com/World-sBestCSStudy/world_best_CS_study/tree/main/Web/Spring)
 
 ### 📅 일정
 
@@ -37,6 +36,6 @@
 
 ### 🥰 스터디원
 
-| 비고   | 김다희 | 김창희 | 이성완 | 위재원 |
-| ------ | ------ | ------ | ------ | ------ |
-| 흑기사 | 이성완 | 김다희 | 위재원 | 김창희 |
+| 비고   | 김다희 | 김창희 | 이성완 | 위재원 | 박정호 |
+| ------ | ------ | ------ | ------ | ------ | ------ |
+| 흑기사 | 이성완 | 김다희 | 위재원 | 김창희 | 박정호 |
