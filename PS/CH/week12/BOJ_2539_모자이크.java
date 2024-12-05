@@ -1,4 +1,4 @@
-//BOJ_2539_모자이크 
+//BOJ_2539_모자이크
 import java.io.*;
 import java.util.*;
 
